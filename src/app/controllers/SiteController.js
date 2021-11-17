@@ -9,6 +9,7 @@ class SiteController {
                 res.render('home', {
                     courses: multipleMongosseToObject(courses),
                 });
+                // res.json(courses);
             })
             .catch(next);
 
