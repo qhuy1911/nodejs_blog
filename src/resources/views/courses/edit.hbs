@@ -1,13 +1,14 @@
 <div class="mt-4">
-  <h3>Create a new course</h3>
+  <h3>Update a course</h3>
 
-  <form method='POST' action='/courses/store'>
+  <form method='POST' action='/courses/{{course._id}}?_method=PUT'>
     <div class="form-group">
       <label for="name">Name</label>
       <input
         type="text"
         class="form-control"
         id="name"
+        value="{{course.name}}"
         name="name"
       />
     </div>
@@ -18,8 +19,7 @@
         class="form-control"
         id="description"
         name="description"
-      >
-      </textarea>
+      >{{course.description}}</textarea>
     </div>
     <div class="form-group">
       <label for="videoId">Video Id</label>
@@ -27,6 +27,7 @@
         type="text"
         class="form-control"
         id="videoId"
+        value="{{course.videoId}}"
         name="videoId"
       />
     </div>
@@ -36,10 +37,11 @@
         type="text"
         class="form-control"
         id="level"
+        value="{{course.level}}"
         name="level"
       />
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Edit</button>
   </form>
 </div>
