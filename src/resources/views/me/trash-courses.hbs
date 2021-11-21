@@ -14,7 +14,7 @@
         <th scope="col">#</th>
         <th scope="col">Course Name</th>
         <th scope="col">Level</th>
-        <th scope="col" colspan="2">Created at</th>
+        <th scope="col" colspan="2">Deleted at</th>
       </tr>
     </thead>
       <tbody>
@@ -23,7 +23,7 @@
           <th scope="row">{{sum @index 1}}</th>
           <td>{{ this.name }}</td>
           <td>{{ this.level }}</td>
-          <td>{{ this.createdAt }}</td>
+          <td>{{ this.deletedAt }}</td>
           <td>
               <a class="btn btn-link btn-restore" data-id="{{this._id}}">
                 <i 

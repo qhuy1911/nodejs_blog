@@ -21,8 +21,8 @@ const Course = mongoose.Schema(
 // Add plugin
 mongoose.plugin(slug);
 Course.plugin(mongooseDelete, {
-    overrideMethods: true,
-    deleteAt: true,
+    deletedAt: true,
+    overrideMethods: 'all',
 });
 
 module.exports = mongoose.model('Course', Course);
