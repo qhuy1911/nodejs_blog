@@ -78,6 +78,11 @@ class CoursesController {
                     .then(() => res.redirect('back'))
                     .catch(next);
                 break;
+            case 'restore':
+                Course.restore({ _id: { $in: req.body.courseIds } })
+                    .then(() => res.redirect('back'))
+                    .catch(next);
+                break;
             default:
                 res.json({ message: 'Action Invalid' });
         }
