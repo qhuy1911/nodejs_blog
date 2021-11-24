@@ -27,14 +27,24 @@
       <button class="btn btn-primary btn-sm check-all-submit-btn disabled">Action</button>
     </div>
   </div>
+
   <table class="table mt-4">
     <thead>
       <tr>
         <td></td>
         <th scope="col">#</th>
-        <th scope="col">Course Name</th>
-        <th scope="col">Level</th>
-        <th scope="col" colspan="2">Created at</th>
+        <th scope="col">
+          Course Name
+          {{{sortable 'name' _sort}}}
+        </th>
+        <th scope="col">
+          Level
+          {{{sortable 'level' _sort}}}
+        </th>
+        <th scope="col" colspan="2">
+          Created at
+          {{{sortable 'createdAt' _sort}}}
+        </th>
       </tr>
     </thead>
     <tbody>
